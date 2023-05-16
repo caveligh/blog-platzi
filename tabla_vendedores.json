@@ -1,0 +1,55 @@
+{
+  "tabla": {
+    "nombre": "vendedores",
+    "campos": [
+      {
+        "nombre": "id_vendedor",
+        "tipo_de_dato": "NUMBER(10)",
+        "posicion_inicial": 0,
+        "posicion_final": 9,
+        "descripcion": "Identificador único para cada vendedor (clave primaria)",
+        "obligatorio": "Sí"
+      },
+      {
+        "nombre": "nombre",
+        "tipo_de_dato": "VARCHAR2(50)",
+        "posicion_inicial": 10,
+        "posicion_final": 59,
+        "descripcion": "Nombre del vendedor",
+        "obligatorio": "Sí"
+      },
+      {
+        "nombre": "apellido",
+        "tipo_de_dato": "VARCHAR2(50)",
+        "posicion_inicial": 60,
+        "posicion_final": 109,
+        "descripcion": "Apellido del vendedor",
+        "obligatorio": "Sí"
+      },
+      {
+        "nombre": "correo_electronico",
+        "tipo_de_dato": "VARCHAR2(100)",
+        "posicion_inicial": 110,
+        "posicion_final": 209,
+        "descripcion": "Dirección de correo electrónico del vendedor",
+        "obligatorio": "No"
+      },
+      {
+        "nombre": "telefono",
+        "tipo_de_dato": "VARCHAR2(20)",
+        "posicion_inicial": 210,
+        "posicion_final": 229,
+        "descripcion": "Número de teléfono del vendedor",
+        "obligatorio": "No"
+      },
+      {
+        "nombre": "fecha_ingreso",
+        "tipo_de_dato": "DATE",
+        "posicion_inicial": 230,
+        "posicion_final": 239,
+        "descripcion": "Fecha en que el vendedor se unió a la empresa",
+        "obligatorio": "No"
+      }
+    ]
+  }
+}
