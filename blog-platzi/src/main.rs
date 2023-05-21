@@ -100,6 +100,8 @@ async fn new_post(pool: web::Data<DbPool>, item: web::Json<NewPostHandler>) -> i
 async fn main() -> std::io::Result<()> {
     dotenv().ok();
     let db_url = env::var("DATABASE_URL").expect("DATABASE_URL not found");
+    let port = env::var("PORT").expect("PORT not found");
+    let port : u16 = port.parse().unwrap();
 
     let connection = ConnectionManager::<PgConnection>::new(db_url);
 
@@ -118,7 +120,7 @@ async fn main() -> std::io::Result<()> {
             .app_data(web::Data::new(pool.clone()))
             .app_data(web::Data::new(tera))
     })
-    .bind(("127.0.0.1", 8090))
+    .bind(("0.0.0.0", port))
     .unwrap()
     .run()
     .await
